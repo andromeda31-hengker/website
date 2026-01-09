@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interstellar</title>
+  <link rel="stylesheet" href="baju.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo-title">
+      <img src="logo.jpg" alt="Logo Interstellar" class="logo">
+      <h1>Interstellar</h1>
+    </div>
+    <nav>
+      <button onclick="window.location.href='biodata.html'">Biodata</button>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="toggleDropdown()">Project ▾</button>
+        <div class="dropdown-content" id="dropdownMenu">
+          <a href="form10.html" target="_blank">FORM</a>
+          <a href="mojokerto20.html" target="_blank">Kota Mojokerto</a>
+          <a href="https://www.spacex.com/" target="_blank">SpaceX</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="quote">
+      <p>“We used to look up at the sky and wonder at our place in the stars. 
+         Now we just look down and worry about our place in the dirt.” 
+         — Interstellar</p>
+    </section>
+
+    <section class="planets">
+      <h2>Eksplorasi Planet</h2>
+      <div class="planet-gallery">
+        <div class="planet-card">
+          <img src="miller.jpg" alt="Object 1">
+          <h3>Planet Miller</h3>
+        </div>
+        <div class="planet-card">
+          <img src="drmann.jpg" alt="Object 2">
+          <h3>Planet Mann</h3>
+        </div>
+        <div class="planet-card">
+          <img src="edmunds.jpg" alt="Object 3">
+          <h3>Planet Edmunds</h3>
+        </div>
+        <div class="planet-card">
+          <img src="gargantua.jpg" alt="Object 4">
+          <h3>Gargantua</h3>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Interstellar || dibuat oleh penggemar interstellar:D</p>
+  </footer>
+
+  <!-- Script untuk dropdown -->
+  <script>
+    function toggleDropdown() {
+      document.getElementById("dropdownMenu").classList.toggle("show");
+    }
+
+    // Tutup dropdown kalau klik di luar
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        for (let i = 0; i < dropdowns.length; i++) {
+          let openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>
